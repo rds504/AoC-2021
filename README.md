@@ -1,2 +1,5 @@
 # Advent of Code 2021
-Solutions in Python 3
+
+Solutions written in Python 3 and uploaded when I get around to it.
+
+See [adventofcode.com](https://adventofcode.com/2021).
