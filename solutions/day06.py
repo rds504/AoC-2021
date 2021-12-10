@@ -1,4 +1,4 @@
-from tools.general import load_input
+from tools.general import load_ints
 
 def grow_fish(initial, days):
 
@@ -13,7 +13,7 @@ def grow_fish(initial, days):
 
     return sum(fish)
 
-initial_fish = [int(i) for i in load_input('day06.txt').split(',')]
+initial_fish = load_ints('day06.txt')
 
 print(f'Part 1 => {grow_fish(initial_fish, 80)}')
 print(f'Part 2 => {grow_fish(initial_fish, 256)}')
