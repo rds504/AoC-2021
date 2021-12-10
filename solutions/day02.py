@@ -1,6 +1,6 @@
-from tools.general import load_input
+from tools.general import load_strings
 
-commands = [(d, int(m)) for d, m in (line.split() for line in load_input('day02.txt').split('\n'))]
+commands = [(d, int(m)) for d, m in (line.split() for line in load_strings('day02.txt'))]
 
 # Part 1
 hpos, vpos = 0, 0

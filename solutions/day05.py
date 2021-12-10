@@ -1,7 +1,7 @@
-from tools.general import load_input
+from tools.general import load_strings
 
 vent_lines = []
-for l in load_input('day05.txt').split('\n'):
+for l in load_strings('day05.txt'):
     x0, y0 = l.split(' -> ')[0].split(',')
     x1, y1 = l.split(' -> ')[1].split(',')
     vent_lines.append(((int(x0), int(y0)), (int(x1), int(y1))))

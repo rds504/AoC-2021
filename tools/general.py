@@ -17,9 +17,11 @@ def load_ints(filename, base=10, delim=','):
     '''
     Load contents of a text file, interpreted as a list of integers
     '''
-    data = []
+    return [int(i, base) for i in load_input(filename).split(delim)]
 
-    with open(path.join('input', filename), 'r') as fd:
-        data = [int(i, base) for i in fd.read().split(delim)]
+def load_strings(filename, delim='\n'):
 
-    return data
+    '''
+    Load contents of a text filem interpreted as a list of strings
+    '''
+    return load_input(filename).split(delim)

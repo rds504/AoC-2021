@@ -1,6 +1,6 @@
-from tools.general import load_input
+from tools.general import load_strings
 
-diagnostics = load_input('day03.txt').split('\n')
+diagnostics = load_strings('day03.txt')
 
 # Part 1
 BITS = 12
