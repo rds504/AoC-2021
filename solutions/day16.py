@@ -91,7 +91,7 @@ def sum_versions(packet):
 
     ver_sum = packet[0]
 
-    if isinstance(packet[2], list):
+    if packet[1] != 4:
         # Operator with one or more sub-packets
         ver_sum += sum(sum_versions(sub_pac) for sub_pac in packet[2])
 
@@ -102,9 +102,9 @@ OPR_TYPE = {
     1 : product,
     2 : min,
     3 : max,
-    5 : (lambda seq : 1 if seq[0] > seq[1] else 0),
-    6 : (lambda seq : 1 if seq[0] < seq[1] else 0),
-    7 : (lambda seq : 1 if seq[0] == seq[1] else 0)
+    5 : (lambda pair : 1 if pair[0] > pair[1] else 0),
+    6 : (lambda pair : 1 if pair[0] < pair[1] else 0),
+    7 : (lambda pair : 1 if pair[0] == pair[1] else 0)
 }
 
 def evaluate_expr(packet):
